@@ -11,7 +11,7 @@
 	<groupId>com.Sembo.server.app</groupId>
 	<artifactId>SemboServer</artifactId>
 	<version>1</version>
-	<name>SemboWeb</name>
+	<name>SemboServer</name>
 	<description>Sembo Server Statistics</description>
 	<properties>
 		<java.version>15</java.version>
