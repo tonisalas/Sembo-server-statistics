@@ -29,7 +29,7 @@ public class SemboExternalService {
 	private final String requestUrl = "/sembo/hotels-test/countries/{0}/hotels";
 	
 	private final String[] countries = new String[]{"es","it","fr"};
-		
+			
 			
 	public List<StatisticsData> getSemboHotels() throws InterruptedException, ExecutionException{
 			
@@ -63,7 +63,16 @@ public class SemboExternalService {
 				i++;
 			}
 			
-			statistics.setCountry(key);
+			String country = "";
+			if (key.equals("es")) {
+				country = "Spain";
+			} else if (key.equals("it")) {
+				country = "Italy";
+			} else {
+				country = "France";
+			}
+			
+			statistics.setCountry(country + " (" + key + ")");
 			statistics.setAverage(totalScore / Double.valueOf(lHotels.size()));
 			
 			lStatistics.add(statistics);
